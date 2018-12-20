@@ -39,8 +39,7 @@
 		<!-- pam_mount parameters: Volume-related -->
 
 <mkmountpoint enable="1" remove="true" />
-<volume enable="1" remove="true"
-       user="*"
+<volume user="*"
        fstype="cifs"
        server="sambahome"
        path="%(USER)"      

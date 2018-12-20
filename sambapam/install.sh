@@ -19,17 +19,16 @@ authconfig --enableshadow --enablelocauthorize --enableldap --ldapserver='ldap' 
 /usr/sbin/smbd
 /usr/sbin/nmbd
 
-smbpasswd -a pere
-smbpasswd -a pau
-smbpasswd -a anna
-smbpasswd -a marta
-smbpasswd -a admin
-smbpasswd -a local01
-smbpasswd -a local02
-smbpasswd -a local03
+echo -e "pere\npere"|smbpasswd -a pere
+echo -e "pau\npau"|smbpasswd -a pau
+echo -e "marta\nmarta"|smbpasswd -a marta
+echo -e "admin\nadmin"|smbpasswd -a admin
+echo -e "local01\nlocal01"|smbpasswd -a local01
+echo -e "local02\nlocal02"|smbpasswd -a local02
+echo -e "local03\nlocal03"|smbpasswd -a local03
 mkdir -p /tmp/home/pere /tmp/home/marta/ /tmp/home/anna /tmp/home/pau /tmp/home/admin
 chown pere.hisx2 /tmp/home/pere
 chown pau.hisx2 /tmp/home/pau
-chown anna.hisx2 /tmp/home/anna
+#chown anna.hisx2 /tmp/home/anna
 chown marta.hisx2 /tmp/home/marta
 chown pere.wheel /tmp/home/admin
